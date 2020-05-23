@@ -2,8 +2,8 @@
   "development": {
     "username": "postgres",
     "password": "secret",
-    "database": "`todo-list-app`",
-    "host": "127.0.0.1",
+    "database": "todo-list-app",
+    "host": "localhost",
     "dialect": "postgres",
     "operatorsAliases": false
   },
