@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.addColumn("TodoLists", "userId", {
+    await queryInterface.addColumn("TodoLists", "UserId", {
       type: Sequelize.INTEGER,
       references: {
         model: "Users",
@@ -12,7 +12,7 @@ module.exports = {
       onDelete: "SET NULL",
     });
 
-    await queryInterface.addColumn("TodoItems", "todoListId", {
+    await queryInterface.addColumn("TodoItems", "TodoListId", {
       type: Sequelize.INTEGER,
       references: {
         model: "TodoLists",
@@ -26,7 +26,7 @@ module.exports = {
    */
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.removeColumn("TodoLists", "userId");
-    await queryInterface.removeColumn("TodoItems", "todoListId");
+    await queryInterface.removeColumn("TodoLists", "UserId");
+    await queryInterface.removeColumn("TodoItems", "TodoListId");
   },
 };
